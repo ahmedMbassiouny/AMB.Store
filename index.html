@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- website name -->
+  <title>AMB Store</title>
+  <!-- website icon -->
+  <link rel="icon" type="image/x-icon" href="images/love-favicon.ico" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
+  <!-- fontawsome-library css -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- normalize css -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container-fluid ">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light rounded-3 my-3 "
+      style=" position: sticky; top: 0rem; z-index: 10;  box-shadow: 0 0 20px #00000063">
+      <div class="container-fluid ">
+        <a class="navbar-brand ms-3 d-flex align-items-center fw-bold fs-3" style="color: #1190c2;" href="#">AMB<span
+            style="color: #bbb3b3; font-weight: bold">.Store</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav myPages mr-auto pe-5 me-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link page-ele active " href="#" onclick="setPage('home',this)">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link page-ele " href="#" onclick="setPage('products',this)">Products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle page-ele" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item page-ele" href="#" onclick="setPage('electronics',this)">Electronics</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item page-ele" href="#" onclick="setPage('jewelery',this)">Jewelery</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item page-ele" href="#" onclick="setPage('men\'s clothing',this)">Men's
+                    Clothing</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item page-ele" href="#" onclick="setPage('women\'s clothing',this)">Women's
+                    Clothing</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Will be added -->
+            <!-- <li class="nav-item">
+              <a class="nav-link page-ele" href="#" onclick="setPage('us',this)">Profile</a>
+            </li> -->
+            <!-- Will be added -->
+            <!-- <li class="nav-item">
+              <a class="nav-link page-ele" href="#" onclick="setPage('about',this)">About Us</a>
+            </li> -->
+          </ul>
+          <!-- Will be added -->
+          <!-- <span class="ms-auto me-5 d-flex align-items-center ">
+            <i class="fa fa-shopping-cart"></i>
+            <p class="d-blok d-md-none m-0 ms-1  "> My cart</p>
+          </span> -->
+        </div>
+      </div>
+    </nav>
+
+    <div id="page-container" class="">
+
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row p-5 align-items-center text-center text-lg-start justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">© 2023 Template by <span>Ahmed Bassiouny</span>
+          <br>
+          All rights reserved to <span>AMB</span><span class="text-white-50">.Store</span>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 pt-3 pt-lg-0">
+          <ul class=" p-3 social-icons d-flex justify-content-center">
+            <li class="pe-3">
+              <img width="70px" height="40px" src="images/Visa.webp" alt="">
+            </li>
+            <li class="pe-3">
+              <img width="70px" height="40px" src="images/brand-mastercard_3x.webp" alt="">
+            </li>
+            <li class="pe-3">
+              <img width="70px" height="40px" src="images/PayPal.webp" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 pt-3 pt-lg-0">
+          <ul class=" p-3 social-icons d-flex justify-content-center">
+            <li class="pe-3">
+              <a href=""><i class="fa-brands soc-icon fa-facebook-f "></i></a>
+            </li>
+            <li class="pe-3">
+              <a href=""><i class="fa-brands soc-icon fa-twitter"></i></a>
+            </li>
+            <li class="pe-3">
+              <a href=""><i class="fa-brands soc-icon fa-dribbble"></i></a>
+            </li>
+            <li class="pe-3">
+              <a href=""><i class="fa-brands soc-icon fa-behance"></i></a>
+            </li>
+            <li class="pe-3">
+              <a href=""><i class="fa-brands soc-icon fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"> </script>
+  <script src="js/main.js"> </script>
+</body>
+
+</html>
