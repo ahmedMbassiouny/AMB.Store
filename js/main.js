@@ -141,13 +141,13 @@ function showAllProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " style="height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; height:300px;"  >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   AllProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 style="color: #1190c2;">${AllProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; color: #1190c2;">${AllProducts[i].title}</h3>
             <p>${AllProducts[i].description}
                 </p>
               </div>
@@ -162,9 +162,6 @@ function showAllProducts() {
               <div class="rate-num">${AllProducts[i].rating.rate}</div>
                 </div>
               </div>
-              <a href="#" onclick="setPage('product', ${
-                AllProducts[i].id
-              })">Details</a>
             </div>
           </div>
     `;
@@ -186,13 +183,13 @@ function showNewProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " style="height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   newProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 style="color: #1190c2;">${newProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; color: #1190c2;">${newProducts[i].title}</h3>
             <p>${newProducts[i].description}
                 </p>
               </div>
@@ -206,9 +203,6 @@ function showNewProducts() {
               <div class="rate-num">${newProducts[i].rating.rate}</div>
                 </div>
               </div>
-              <a href="#" onclick="setPage('product', ${
-                newProducts[i].id
-              })">Details</a>
             </div>
           </div>
     `;
@@ -230,13 +224,13 @@ function showBestProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " style="height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   bestProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 style="color: #1190c2;">${bestProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; color: #1190c2;">${bestProducts[i].title}</h3>
             <p>${bestProducts[i].description}
                 </p>
               </div>
@@ -252,9 +246,6 @@ function showBestProducts() {
               <div class="rate-num">${bestProducts[i].rating.rate}</div>
                 </div>
               </div>
-              <a href="#" onclick="setPage('product', ${
-                bestProducts[i].id
-              })">Details</a>
             </div>
           </div>
     `;
@@ -269,13 +260,13 @@ function showCategoryProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " style="height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   categoryProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 style="color: #1190c2;">${categoryProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; color: #1190c2;">${categoryProducts[i].title}</h3>
             <p>${categoryProducts[i].description}
                 </p>
               </div>
@@ -290,9 +281,6 @@ function showCategoryProducts() {
               <div class="rate-num">${categoryProducts[i].rating.rate}</div>
                 </div>
               </div>
-              <a href="#" onclick="setPage('product', ${
-                categoryProducts[i].id
-              })">Details</a>
             </div>
           </div>
     `;
@@ -365,3 +353,21 @@ function setPage(page, currLink) {
     currLink.className += " active";
   }
 }
+
+// onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer;"
+
+// <a href="#" onclick="setPage('product', ${
+//   AllProducts[i].id
+// })">Details</a>
+
+// <a href="#" onclick="setPage('product', ${
+//   newProducts[i].id
+// })">Details</a>
+
+// <a href="#" onclick="setPage('product', ${
+//   bestProducts[i].id
+// })">Details</a>
+
+// <a href="#" onclick="setPage('product', ${
+//   categoryProducts[i].id
+// })">Details</a>
