@@ -147,7 +147,7 @@ function showAllProducts() {
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; color: #1190c2;">${AllProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${AllProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${AllProducts[i].title}</h3>
             <p>${AllProducts[i].description}
                 </p>
               </div>
@@ -189,7 +189,7 @@ function showNewProducts() {
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${newProducts[i].id})" style="cursor: pointer; color: #1190c2;">${newProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${newProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${newProducts[i].title}</h3>
             <p>${newProducts[i].description}
                 </p>
               </div>
@@ -230,7 +230,7 @@ function showBestProducts() {
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${bestProducts[i].id})" style="cursor: pointer; color: #1190c2;">${bestProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${bestProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${bestProducts[i].title}</h3>
             <p>${bestProducts[i].description}
                 </p>
               </div>
@@ -266,7 +266,7 @@ function showCategoryProducts() {
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${categoryProducts[i].id})" style="cursor: pointer; color: #1190c2;">${categoryProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${categoryProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${categoryProducts[i].title}</h3>
             <p>${categoryProducts[i].description}
                 </p>
               </div>
