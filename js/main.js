@@ -15,13 +15,13 @@ async function getProducts(page, productID) {
   if (page == "home") {
     // Home Page
     pageContant = `
-            <div id="carouselExampleControls" class="carousel slide rounded my-4" data-bs-ride="carousel">
+      <div id="carouselExampleControls" class="carousel slide rounded my-4 mx-3" data-bs-ride="carousel">
         <div class="carousel-inner rounded-4">
           <div class="carousel-item active">
-            <img src="images/1.png" onclick="setPage('electronics',this)" class="d-block w-100" " alt="...">
+            <img src="images/1.png" onclick="setPage('electronics', document.getElementsByClassName('dropdown-toggle')[0])" class="d-block w-100" "="" alt=" ...">
           </div>
           <div class="carousel-item">
-            <img src="images/4.png" onclick="setPage('jewelery',this)" class="d-block w-100" " alt="...">
+            <img src="images/4.png" onclick="setPage('jewelery', document.getElementsByClassName('dropdown-toggle')[0])" class="d-block w-100" "="" alt=" ...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -36,12 +36,62 @@ async function getProducts(page, productID) {
         </button>
       </div>
 
+      <div class="category-card container-fluid pb-4 ">
+        <div class="cards row">
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('womenClothing', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-1.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Women's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('jewelery', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-4.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Jewelery</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('menClothing', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-3.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Men's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('electronics', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-2.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold ">Electronics</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div id="newCards" class="newCards">
           <div class="sp-title">
             <h3>NEW PRODUCTS </h3>
           </div>
           <div id="newCards-box" class="newCards-box row">
+
           </div>
         </div>
 
@@ -61,13 +111,61 @@ async function getProducts(page, productID) {
   } else if (page == "products") {
     // products Page
     pageContant = `
+      <div class="category-card container-fluid pb-4 ">
+        <div class="cards row">
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('womenClothing', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-1.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Women's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('jewelery', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-4.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Jewelery</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('menClothing', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-3.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold">Men's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 p-3 col-6 col-lg-3">
+            <div class="card rounded-3 overflow-hidden "
+              onclick="setPage('electronics', document.getElementsByClassName('dropdown-toggle')[0])">
+              <div class="cate-img">
+                <img src="images/cate-2.png" class="" alt="...">
+              </div>
+              <div class="card-text">
+                <h5 class="card-title fw-bold ">Electronics</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="allCards row mt-5">
           <div class="sp-title">
             <h3>Our Products</h3>
           </div>
           <div id="allCards-box" class="newCards-box row">
-        
+
           </div>
         </div>
       </div>
@@ -78,8 +176,13 @@ async function getProducts(page, productID) {
     page == "electronics" ||
     page == "jewelery" ||
     page == "men's clothing" ||
-    page == "women's clothing"
+    page == "women's clothing" ||
+    page == "menClothing" ||
+    page == "womenClothing"
   ) {
+    if (page == "menClothing" || page == "womenClothing") {
+      page = page.replace("nCl", "n's cl");
+    }
     let y = await fetch(
       `https://fakestoreapi.com/products/category/${page}`
     ).then((res2) => res2.json());
@@ -93,7 +196,7 @@ async function getProducts(page, productID) {
           <h3>Our ${page.toUpperCase()} Collection</h3>
             </div>
             <div id="categoryCards-box" class="categoryCards-box row">
-          
+
             </div>
           </div>
         </div>
@@ -122,7 +225,7 @@ async function getProducts(page, productID) {
           <h3> Related Products </h3>
             </div>
             <div id="categoryCards-box" class="categoryCards-box row">
-          
+
             </div>
           </div>
         </div>
@@ -141,13 +244,19 @@ function showAllProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer; height:300px;"  >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${
+            AllProducts[i].id
+          })" style="cursor: pointer; height:300px;"  >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   AllProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${AllProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${AllProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${
+              AllProducts[i].id
+            })" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${
+      AllProducts[i].title
+    }</h3>
             <p>${AllProducts[i].description}
                 </p>
               </div>
@@ -183,13 +292,19 @@ function showNewProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${newProducts[i].id})" style="cursor: pointer; height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${
+            newProducts[i].id
+          })" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   newProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${newProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${newProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${
+              newProducts[i].id
+            })" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${
+      newProducts[i].title
+    }</h3>
             <p>${newProducts[i].description}
                 </p>
               </div>
@@ -224,13 +339,19 @@ function showBestProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${bestProducts[i].id})" style="cursor: pointer; height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${
+            bestProducts[i].id
+          })" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   bestProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${bestProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${bestProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${
+              bestProducts[i].id
+            })" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${
+      bestProducts[i].title
+    }</h3>
             <p>${bestProducts[i].description}
                 </p>
               </div>
@@ -260,13 +381,19 @@ function showCategoryProducts() {
           <div class="my-card p-3 col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class=" p-3 rounded-3 d-flex flex-column justify-content-center align-items-center "
               style="background: #fff; border: 1px solid #cbd4d7;  ">
-          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${categoryProducts[i].id})" style="cursor: pointer; height:300px;" >
+          <div class="img-box d-flex flex-column justify-content-center align-items-center " onclick="setPage('product', ${
+            categoryProducts[i].id
+          })" style="cursor: pointer; height:300px;" >
                 <img class="img-fluid pb-3" width="200px" style="max-height:300px;"  src=${
                   categoryProducts[i].image
                 } alt="">
               </div>
               <div class="product-name">
-            <h3 onclick="setPage('product', ${categoryProducts[i].id})" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${categoryProducts[i].title}</h3>
+            <h3 onclick="setPage('product', ${
+              categoryProducts[i].id
+            })" onmouseover="this.style.color='#0066ff'" onmouseout="this.style.color='#1190c2'" style="cursor: pointer; color: #1190c2;">${
+      categoryProducts[i].title
+    }</h3>
             <p>${categoryProducts[i].description}
                 </p>
               </div>
@@ -303,9 +430,7 @@ function showProduct() {
               }</h2>
           <h5 class="text-black-50 product-desc">${myProduct.description}</h5>
               <p class="text-black-50 pt-2"><span class="text-black fw-bold">Category: </span><a id="cate-link" href="#" class="text-warning "
-                  >${
-    myProduct.category
-  }</a></p>
+                  >${myProduct.category}</a></p>
             </div>
             <div class="py-3 prod-price  col-12 col-sm-6 col-md-4 col-lg-4 d-flex align-items-center" >
               <div class="w-100 p-3 rounded-3 d-flex flex-column justify-content-center"
@@ -341,7 +466,10 @@ function showProduct() {
     `;
   document.getElementById("myProduct-box").innerHTML = bigProduct;
   document.getElementById("cate-link").onclick = () =>
-    setPage(myProduct.category, 1);
+    setPage(
+      myProduct.category,
+      document.getElementsByClassName("dropdown-toggle")[0]
+    );
 }
 
 function setPage(page, currLink) {
@@ -354,20 +482,33 @@ function setPage(page, currLink) {
   }
 }
 
-// onclick="setPage('product', ${AllProducts[i].id})" style="cursor: pointer;"
+window.addEventListener("scroll", function () {
+  var navBar = document.querySelector(".navbar");
+  if (
+    window.scrollY >=
+    1 * parseFloat(getComputedStyle(document.documentElement).fontSize)
+  ) {
+    navBar.style.borderRadius = "0em 0em 1rem 1rem";
+  } else {
+    navBar.style.borderRadius = "1em";
+  }
+});
 
-// <a href="#" onclick="setPage('product', ${
-//   AllProducts[i].id
-// })">Details</a>
-
-// <a href="#" onclick="setPage('product', ${
-//   newProducts[i].id
-// })">Details</a>
-
-// <a href="#" onclick="setPage('product', ${
-//   bestProducts[i].id
-// })">Details</a>
-
-// <a href="#" onclick="setPage('product', ${
-//   categoryProducts[i].id
-// })">Details</a>
+// removed items
+// -1 Details button
+// // <a href="#" onclick="setPage('product', ${
+// //   AllProducts[i].id
+// // })">Details</a>
+//
+// // <a href="#" onclick="setPage('product', ${
+// //   newProducts[i].id
+// // })">Details</a>
+//
+// // <a href="#" onclick="setPage('product', ${
+// //   bestProducts[i].id
+// // })">Details</a>
+//
+// // <a href="#" onclick="setPage('product', ${
+// //   categoryProducts[i].id
+// // })">Details</a>
+//

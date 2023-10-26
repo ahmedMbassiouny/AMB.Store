@@ -26,8 +26,8 @@
 <body>
   <div class="container-fluid ">
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light rounded-3 my-3 "
-      style=" position: sticky; top: 0rem; z-index: 10;  box-shadow: 0 0 20px #00000063">
+    <nav class="navbar navbar-expand-md navbar-light bg-light my-3 "
+      style=" position: sticky; top: 0rem; z-index: 10;  box-shadow: 0 0 20px #00000063; border-radius:1em;transition:.6s">
       <div class="container-fluid ">
         <a class="navbar-brand ms-3 d-flex align-items-center fw-bold fs-3" style="color: #1190c2;" href="#">AMB<span
             style="color: #bbb3b3; font-weight: bold">.Store</span></a>
@@ -50,26 +50,30 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item page-ele" href="#" onclick="setPage('electronics',this)">Electronics</a>
+                  <a class="dropdown-item page-ele" href="#"
+                    onclick="setPage('electronics', document.getElementsByClassName('dropdown-toggle')[0])">Electronics</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <a class="dropdown-item page-ele" href="#" onclick="setPage('jewelery',this)">Jewelery</a>
+                  <a class="dropdown-item page-ele" href="#"
+                    onclick="setPage('jewelery', document.getElementsByClassName('dropdown-toggle')[0])">Jewelery</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <a class="dropdown-item page-ele" href="#" onclick="setPage('men\'s clothing',this)">Men's
+                  <a class="dropdown-item page-ele" href="#"
+                    onclick="setPage('menClothing', document.getElementsByClassName('dropdown-toggle')[0])">Men's
                     Clothing</a>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li>
-                  <a class="dropdown-item page-ele" href="#" onclick="setPage('women\'s clothing',this)">Women's
+                  <a class="dropdown-item page-ele" href="#"
+                    onclick="setPage('womenClothing', document.getElementsByClassName('dropdown-toggle')[0])">Women's
                     Clothing</a>
                 </li>
               </ul>

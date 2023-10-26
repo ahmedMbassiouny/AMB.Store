@@ -91,7 +91,7 @@ a {
 }
 .sp-title h3 {
   width: fit-content;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
 }
 .sp-title h3::before {
@@ -142,3 +142,36 @@ footer .social-icons .soc-icon:hover {
 .my-card:hover img{
   scale: 1.1;
 }
+
+.category-card .card{
+  padding: 0;
+  height: 140px;
+}
+.category-card .cate-img{
+  width: 100%;
+  height: 100%;
+}
+.category-card img{
+  width: 100%;
+  height: 100%;
+}
+.category-card .card-text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-wrap: nowrap;
+  background: #1190c2b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* i want to eddit space bettwen abcd */
+  opacity: 0;
+  transition: .8s;
+  cursor: pointer;
+}
+.category-card .card:hover .card-text{
+  opacity: 1;
+}
+
+
